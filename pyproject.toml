@@ -1,14 +1,10 @@
-[tool.poetry]
-name = "httpx"
-version = "0.23.3"
-description = "The next generation HTTP client"
-
 [build-system]
 requires = ["hatchling", "hatch-fancy-pypi-readme"]
 build-backend = "hatchling.build"
 
 [project]
 name = "httpx"
+version = "0.23.3"
 description = "The next generation HTTP client."
 license = "BSD-3-Clause"
 requires-python = ">=3.7"
@@ -37,8 +33,10 @@ dependencies = [
     "httpcore==1.*",
     "rfc3986[idna2008]>=1.3,<2",
     "sniffio",
+    "anyio==4.9.0"
 ]
-dynamic = ["readme", "version"]
+# dynamic = ["readme", "version"]
+dynamic = ["readme"]
 
 [project.optional-dependencies]
 brotli = [
@@ -66,8 +64,8 @@ Documentation = "https://www.python-httpx.org"
 Homepage = "https://github.com/encode/httpx"
 Source = "https://github.com/encode/httpx"
 
-[tool.hatch.version]
-path = "httpx/__version__.py"
+# [tool.hatch.version]
+# path = "httpx/__version__.py"
 
 [tool.hatch.build.targets.sdist]
 include = [
